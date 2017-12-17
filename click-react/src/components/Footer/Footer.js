@@ -5,8 +5,11 @@ import "./Footer.css";
 const Footer = () => (
   <footer className="footer">
     <div className="bottom">
-    	Clicky Game!
-    	<img alt="react" src="../../public/assets/images/react.svg"/> 
+    	Click Game!
+    	<img
+    		alt="react" 
+    		src="https://github.com/ksbains/Clicky-Game/blob/master/click-react/src/images/react.svg?raw=true"
+    	/> 
     </div>
   </footer>
 );

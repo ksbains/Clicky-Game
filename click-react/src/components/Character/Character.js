@@ -9,6 +9,7 @@ return (
 	  	role="img"
 	  	aria-label="click item" 
 	  	className="click-item"
+	  	onClick={props.random}
 	  	style={
 	  		{
 	  			backgroundImage: `url(${props.url})`

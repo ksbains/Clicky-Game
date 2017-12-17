@@ -14,3 +14,9 @@
     padding: 8px;
     font-weight: 600;
 }
+.footer .bottom img {
+    width: 20px;
+    position: relative;
+    top: 3px;
+    left: 2px;
+}
