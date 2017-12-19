@@ -7,8 +7,12 @@ const Character = (props) => {
 return (
 	<div 
 	  	role="img"
+	  	clicked="false"
 	  	aria-label="click item" 
 	  	className="click-item"
+	  	//onClick={() =>{
+	  	//this.props.clicked = false;
+	  	//props.random()}
 	  	onClick={props.random}
 	  	style={
 	  		{
