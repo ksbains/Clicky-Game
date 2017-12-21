@@ -65,46 +65,54 @@ class App extends Component {
 		for (var i = 0; i < temp.length; i++) {
 			temp[i].count = 0;
 		}
-		this.setState({
+		return {
 			tiles: temp,
 			message: "Click an image to begin!"
-		});
+		}
 	};
 
-	random = (event) => {
-		let count = event.target.count;
-		console.log("The count is" + count);
-		console.log("it is of type", typeof count);
+	random = (tile, index) => {
+		let count = tile.count;
+		let nextTiles;
+		let nextScore = this.state.score;
+		let nextMessage;
+		console.log("the tile is ", tile, 'index is', index);
 		if(count){
 			//this is if the count is 1 and has already been clicked. 
-			this.setState({
-				score: 0,
-				message: "You guessed Incorrectly!"
-			});
-			this.gameOver();
+			nextScore = 0;
+			let nextValues = this.gameOver();
+			nextMessage = nextValues.message;
+			nextTiles = nextValues.tiles;
 		 }else {
-		 	this.state.score++;
-		 	event.target.count++;
-		 	this.setState({
-		 		score: this.state.score,
-		 		message: "You guessed Correctly!"
-		 	})
-		 	if(this.state.score > this.state.topScore){
-				this.setState({
-					topScore: this.state.score
-				});
-			}
+		 	nextTiles = this.state.tiles.slice(0)
+		 	nextTiles[index].count++
+		 	nextScore++
+		 	nextMessage = "You guessed Correctly!" 
+		 	// this.stateiles[index].count++;
+		 	// console.log("the count for the obj has incremneted", this.state.tiles[index]);
+		 	// this.setState({
+		 	// 	tiles: nextTiles,
+		 	// 	score: this.state.score + 1,
+		 	// 	message: "You guessed Correctly!"
+		 	// })
+		 // 	if(this.state.score >= this.state.topScore){
+			// 	this.setState({
+			// 		topScore: ++this.state.score
+			// 	});
+			// }
 		 }	
-		 let tmpUrls = this.state.tiles;
+		 let tmpUrls = nextTiles || this.state.tiles.slice(0);
 		    for (let i = tmpUrls.length - 1; i > 0; i--) {
 		        var j = Math.floor(Math.random() * (i + 1));
 		        var temp = tmpUrls[i];
 		        tmpUrls[i] = tmpUrls[j];
 		        tmpUrls[j] = temp;
 		    }
-
+		    console.log('next message', nextMessage)
 	    this.setState({
-	    	tiles: tmpUrls
+	    	tiles: tmpUrls,
+	    	score: nextScore,
+	    	message: nextMessage
 	    });
 	};	
 	
