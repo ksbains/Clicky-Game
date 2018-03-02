@@ -8,51 +8,63 @@ class App extends Component {
 	state = {
 		tiles: [
 		{
-			url: "https://github.com/ksbains/Clicky-Game/blob/master/click-react/src/images/Beth.png?raw=true",
+			// url: "/src/images/Beth.png",
+			url: "https://github.com/ksbains/Clicky-Game/blob/master/src/images/Beth.png?raw=true",
 			count: 0
 		},
 		{
-			url: "https://github.com/ksbains/Clicky-Game/blob/master/click-react/src/images/bird.jpg?raw=true",
+			url: "https://github.com/ksbains/Clicky-Game/blob/master/src/images/bird.jpg?raw=true",
+			// url: "/src/images/bird.jpg",
 			count: 0
 		},
 		{
-			url: "https://github.com/ksbains/Clicky-Game/blob/master/click-react/src/images/evilMorty.png?raw=true",
+			url: "https://github.com/ksbains/Clicky-Game/blob/master/src/images/evilMorty.png?raw=true",
+			// url: "/src/images/evilMorty.png",
 			count: 0
 		},
 		{
-			url: "https://github.com/ksbains/Clicky-Game/blob/master/click-react/src/images/giantHead.png?raw=true",
+			url: "https://github.com/ksbains/Clicky-Game/blob/master/src/images/giantHead.png?raw=true",
+			// url: "/src/images/giantHead.png",
 			count: 0
 		},
 		{
-			url: "https://github.com/ksbains/Clicky-Game/blob/master/click-react/src/images/goldenfold.jpg?raw=true",
+			url: "https://github.com/ksbains/Clicky-Game/blob/master/src/images/goldenfold.jpg?raw=true",
+			// url: "/src/images/goldenfold.jpg",
 			count: 0
 		},
 		{
-			url: "https://github.com/ksbains/Clicky-Game/blob/master/click-react/src/images/jerry.jpg?raw=true",
+			url: "https://github.com/ksbains/Clicky-Game/blob/master/src/images/jerry.jpg?raw=true",
+			// url: "/src/images/jerry.jpg",
 			count: 0
 		},
 		{
-			url: "https://github.com/ksbains/Clicky-Game/blob/master/click-react/src/images/Jessica.png?raw=true",
+			url: "https://github.com/ksbains/Clicky-Game/blob/master/src/images/Jessica.png?raw=true",
+			// url: "/src/images/Jessica.png",
 			count: 0
 		},
 		{
-			url: "https://github.com/ksbains/Clicky-Game/blob/master/click-react/src/images/Meeseeks.png?raw=true",
+			url: "https://github.com/ksbains/Clicky-Game/blob/master/src/images/Meeseeks.png?raw=true",
+			// url: "/src/images/Meeseeks.png",
 			count:0
 		},
 		{
-			url: "https://github.com/ksbains/Clicky-Game/blob/master/click-react/src/images/poopybutthole.jpg?raw=true",
+			url: "https://github.com/ksbains/Clicky-Game/blob/master/src/images/poopybutthole.jpg?raw=true",
+			// url: "/src/images/poopybutthole.jpg",
 			count: 0
 		},
 		{
-			url: "https://github.com/ksbains/Clicky-Game/blob/master/click-react/src/images/rick.jpg?raw=true",
+			url: "https://github.com/ksbains/Clicky-Game/blob/master/src/images/rick.jpg?raw=true",
+			// url: "/src/images/rick.jpg",
 			count: 0
 		},
 		{
-			url: "https://github.com/ksbains/Clicky-Game/blob/master/click-react/src/images/summer.jpg?raw=true",
+			url: "https://github.com/ksbains/Clicky-Game/blob/master/src/images/summer.jpg?raw=true",
+			// url: "/src/images/summer.jpg",
 			count: 0
 		},
 		{
-			url: "https://github.com/ksbains/Clicky-Game/blob/master/click-react/src/images/Morty.JPG?raw=true",
+			url: "https://github.com/ksbains/Clicky-Game/blob/master/src/images/Morty.JPG?raw=true",
+			// url: "/src/images/Morty.JPG",
 			count: 0
 		}],
 		score: 0,
@@ -88,18 +100,6 @@ class App extends Component {
 		 	nextTiles[index].count++
 		 	nextScore++
 		 	nextMessage = "You guessed Correctly!" 
-		 	// this.stateiles[index].count++;
-		 	// console.log("the count for the obj has incremneted", this.state.tiles[index]);
-		 	// this.setState({
-		 	// 	tiles: nextTiles,
-		 	// 	score: this.state.score + 1,
-		 	// 	message: "You guessed Correctly!"
-		 	// })
-		 // 	if(this.state.score >= this.state.topScore){
-			// 	this.setState({
-			// 		topScore: ++this.state.score
-			// 	});
-			// }
 		 }	
 		 let tmpUrls = nextTiles || this.state.tiles.slice(0);
 		    for (let i = tmpUrls.length - 1; i > 0; i--) {
@@ -129,7 +129,6 @@ class App extends Component {
 			tiles={this.state.tiles}
 			random={this.random}
 		/>
-		<Footer/>
 		</div>
     );
   }
