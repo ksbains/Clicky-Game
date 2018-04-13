@@ -8,63 +8,51 @@ class App extends Component {
 	state = {
 		tiles: [
 		{
-			// url: "/src/images/Beth.png",
-			url: "https://github.com/ksbains/Clicky-Game/blob/master/src/images/Beth.png?raw=true",
+			url: "/images/Beth.png",
 			count: 0
 		},
 		{
-			url: "https://github.com/ksbains/Clicky-Game/blob/master/src/images/bird.jpg?raw=true",
-			// url: "/src/images/bird.jpg",
+			url: "/images/bird.jpg",
 			count: 0
 		},
 		{
-			url: "https://github.com/ksbains/Clicky-Game/blob/master/src/images/evilMorty.png?raw=true",
-			// url: "/src/images/evilMorty.png",
+			url: "/images/evilMorty.png",
 			count: 0
 		},
 		{
-			url: "https://github.com/ksbains/Clicky-Game/blob/master/src/images/giantHead.png?raw=true",
-			// url: "/src/images/giantHead.png",
+			url: "/images/giantHead.png",
 			count: 0
 		},
 		{
-			url: "https://github.com/ksbains/Clicky-Game/blob/master/src/images/goldenfold.jpg?raw=true",
-			// url: "/src/images/goldenfold.jpg",
+			url: "/images/goldenfold.jpg",
 			count: 0
 		},
 		{
-			url: "https://github.com/ksbains/Clicky-Game/blob/master/src/images/jerry.jpg?raw=true",
-			// url: "/src/images/jerry.jpg",
+			url: "/images/jerry.jpg",
 			count: 0
 		},
 		{
-			url: "https://github.com/ksbains/Clicky-Game/blob/master/src/images/Jessica.png?raw=true",
-			// url: "/src/images/Jessica.png",
+			url: "/images/Jessica.png",
 			count: 0
 		},
 		{
-			url: "https://github.com/ksbains/Clicky-Game/blob/master/src/images/Meeseeks.png?raw=true",
-			// url: "/src/images/Meeseeks.png",
+			url: "/images/Meeseeks.png",
 			count:0
 		},
 		{
-			url: "https://github.com/ksbains/Clicky-Game/blob/master/src/images/poopybutthole.jpg?raw=true",
-			// url: "/src/images/poopybutthole.jpg",
+			url: "/images/poopybutthole.jpg",
 			count: 0
 		},
 		{
-			url: "https://github.com/ksbains/Clicky-Game/blob/master/src/images/rick.jpg?raw=true",
-			// url: "/src/images/rick.jpg",
+			url: "/images/rick.jpg",
 			count: 0
 		},
 		{
-			url: "https://github.com/ksbains/Clicky-Game/blob/master/src/images/summer.jpg?raw=true",
-			// url: "/src/images/summer.jpg",
+			url: "/images/summer.jpg",
 			count: 0
 		},
 		{
-			url: "https://github.com/ksbains/Clicky-Game/blob/master/src/images/Morty.JPG?raw=true",
-			// url: "/src/images/Morty.JPG",
+			url: "/images/Morty.JPG",
 			count: 0
 		}],
 		score: 0,
@@ -100,6 +88,9 @@ class App extends Component {
 		 	nextTiles[index].count++
 		 	nextScore++
 		 	nextMessage = "You guessed Correctly!" 
+		 	if(nextScore == 12){
+		 		alert("You have won the game!, click on any character to Reset the score and play again!!")
+		 	}
 		 }	
 		 let tmpUrls = nextTiles || this.state.tiles.slice(0);
 		    for (let i = tmpUrls.length - 1; i > 0; i--) {
